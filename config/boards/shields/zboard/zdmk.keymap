@@ -16,6 +16,7 @@
 
 / { 
 #define BASE 0
+#define FN 1
 
 combos {
     compatible = "zmk,combos";
@@ -42,7 +43,17 @@ combos {
 		&kp TAB   &kp Q     &kp W     &kp E      &kp R     &kp T              &kp Y   &kp U   &kp I   &kp O   &kp P   &kp LBKT  &kp RBKT &kp BSLH
 		&kp CAPS  &kp A     &sys_reset     &bootloader      &kp F     &kp G                     &kp H   &kp J   &bootloader  &sys_reset   &kp SEMI  &kp APOS  &kp ENTER
 		&kp LSHFT &kp Z     &kp X     &kp C      &kp V     &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT &kp FSLH  &kp RSHFT &kp UP &kp DEL
-		&kp LCTRL &kp LGUI  &kp LALT  &kp SPACE  &kp RGUI                          &kp SPACE   &kp RALT  &kp RCTRL &kp LEFT &kp DOWN  &kp RIGHT
+		&kp LCTRL &kp LGUI  &kp LALT  &kp SPACE  &mo FN                           &kp SPACE   &kp RALT  &mo FN &kp LEFT &kp DOWN  &kp RIGHT
+		        >;
+		};
+
+		fn_layer {
+		        bindings = <              
+		&kp GRAVE   &kp F1    &kp F2    &kp F3     &kp F4    &kp F5  &kp F6           &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL
+		&none   &none     &none     &none      &none     &none              &none   &kp PG_UP   &kp UP   &kp PG_DN   &none   &none  &none  &none
+		&none  &none     &none     &none      &none     &none                     &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT   &kp END  &none  &none
+		&sys_reset  &none     &none     &none      &none     &none                     &none   &none   &none  &none &none  &sys_reset &kp C_VOL_UP &none
+		&none  &none  &bootloader  &none  &none                                         &none   &bootloader  &none &none &kp C_VOL_DN  &none 
 		        >;
 		};
         
