@@ -9,7 +9,6 @@
 - 3D Printer
 
 ## Printing
-STL's and STEP coming soon.  (within a few days)
 
 ## Wiring
-The pcb is laid out a bit strangely, as far as rows and columns go.  I will publish more pictures and a diagram soon.
+The pcb is laid out a bit strangely, as far as rows and columns go.
